@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow:visible;
+            padding:10px;
+            
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #2980b9 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        form label {
+            display: block;
+            
+            padding: 10px;
+        }
+        form input[type="number"] {
+            width: 96%;
+            padding: 10px;
+            margin: auto;
+        }
+        form button {
+            margin-top: 10px;
+            background: #50b3a2;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        form button:hover {
+            background: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Enter Customer Details</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form action="/predict" method="post">
+            <label for="Age">Age:</label>
+            <input type="number" step="any" name="Age" required><br>
+            <label for="Total_Purchase">Total Purchase:</label>
+            <input type="number" step="any" name="Total_Purchase" required><br>
+            <label for="Account_Manager">Account Manager:</label>
+            <input type="number" step="any" name="Account_Manager" required><br>
+            <label for="Years">Years:</label>
+            <input type="number" step="any" name="Years" required><br>
+            <label for="Num_Sites">Number of Sites:</label>
+            <input type="number" step="any" name="Num_Sites" required><br>
+            <div class="dt" style="display: flex;justify-content: center;align-content: center;">
+                <button type="submit">Predict</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
